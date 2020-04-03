@@ -1,0 +1,58 @@
+//
+//  SaveAccessDelete.swift
+//  RedmedNoteTests
+//
+//  Created by rezo on 4/4/20.
+//  Copyright © 2020 Rezo Joglidze. All rights reserved.
+//
+
+import XCTest
+import CoreData
+import UIKit
+
+@testable import RedmedNote
+//
+//class SaveAccessDelete: XCTestCase {
+//
+//    override func setUp() {
+//        // Put setup code here. This method is called before the invocation of each test method in the class.
+//
+//        // In UI tests it is usually best to stop immediately when a failure occurs.
+//        continueAfterFailure = false
+//
+//        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+//        XCUIApplication().launch()
+//
+//        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+//    }
+//
+//    override func tearDown() {
+//        // Put teardown code here. This method is called after the invocation of each test method in the class.
+//    }
+//
+//    func testExample() {
+//        // Use recording to get started writing UI tests.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    }
+//
+//
+//
+//    func testFetchAllEmployees() {
+//        let managedObjectContext = createMainContextInMemory()
+//        let dataService =  DataService(managedObjectContext: managedObjectContext)
+//        dataService.seedEmployees() // to get all employees which we have in persistent store
+//
+//        //initialize NSFetchRequest
+//        let employeeFetchRequest = NSFetchRequest<Employee>(entityName: "Employee")
+//
+//        do{
+//        //execute with NSManagedObjectContext
+//            let employees = try managedObjectContext.fetch(employeeFetchRequest)
+//        //work with the result
+//            print(employees)
+//        } catch {
+//            print("there is a problem fech employees: \(error)")
+//        }
+//    }
+//
+//}

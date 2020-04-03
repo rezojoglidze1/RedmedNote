@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2CCEAA12437F02C003A3FE5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CCEAA02437F02C003A3FE5 /* CoreDataStack.swift */; };
+		F2CCEAA42437F1F6003A3FE5 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2CCEAA22437F1F6003A3FE5 /* Note.xcdatamodeld */; };
+		F2CCEAA62437F365003A3FE5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CCEAA52437F365003A3FE5 /* Note.swift */; };
+		F2CCEAA82437F379003A3FE5 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CCEAA72437F379003A3FE5 /* Employee.swift */; };
+		F2CCEAAC2437F80D003A3FE5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CCEAAB2437F80D003A3FE5 /* DataService.swift */; };
+		F2CCEAAE2437F863003A3FE5 /* SaveAccessDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CCEAAD2437F863003A3FE5 /* SaveAccessDelete.swift */; };
+		F2D011942437DF7700D4F2F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D011932437DF7700D4F2F0 /* AppDelegate.swift */; };
+		F2D011962437DF7700D4F2F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D011952437DF7700D4F2F0 /* SceneDelegate.swift */; };
+		F2D011982437DF7700D4F2F0 /* NoteDraftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D011972437DF7700D4F2F0 /* NoteDraftViewController.swift */; };
+		F2D0119B2437DF7700D4F2F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D011992437DF7700D4F2F0 /* Main.storyboard */; };
+		F2D0119E2437DF7700D4F2F0 /* RedmedNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2D0119C2437DF7700D4F2F0 /* RedmedNote.xcdatamodeld */; };
+		F2D011A02437DF7900D4F2F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D0119F2437DF7900D4F2F0 /* Assets.xcassets */; };
+		F2D011A32437DF7900D4F2F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D011A12437DF7900D4F2F0 /* LaunchScreen.storyboard */; };
+		F2D011AE2437DF7900D4F2F0 /* RedmedNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D011AD2437DF7900D4F2F0 /* RedmedNoteTests.swift */; };
+		F2D011BA2437E13200D4F2F0 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D011B92437E13200D4F2F0 /* NoteTableViewCell.swift */; };
+		F2D011BE2437E66300D4F2F0 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D011BD2437E66300D4F2F0 /* EditNoteViewController.swift */; };
+		F2D011C02437E73500D4F2F0 /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D011BF2437E73500D4F2F0 /* NoteDetailsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2D011AA2437DF7900D4F2F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D011882437DF7700D4F2F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2D0118F2437DF7700D4F2F0;
+			remoteInfo = RedmedNote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F2CCEAA02437F02C003A3FE5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F2CCEAA32437F1F6003A3FE5 /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		F2CCEAA52437F365003A3FE5 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F2CCEAA72437F379003A3FE5 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		F2CCEAAB2437F80D003A3FE5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F2CCEAAD2437F863003A3FE5 /* SaveAccessDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAccessDelete.swift; sourceTree = "<group>"; };
+		F2D011902437DF7700D4F2F0 /* RedmedNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedmedNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2D011932437DF7700D4F2F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2D011952437DF7700D4F2F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F2D011972437DF7700D4F2F0 /* NoteDraftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDraftViewController.swift; sourceTree = "<group>"; };
+		F2D0119A2437DF7700D4F2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2D0119D2437DF7700D4F2F0 /* RedmedNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RedmedNote.xcdatamodel; sourceTree = "<group>"; };
+		F2D0119F2437DF7900D4F2F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2D011A22437DF7900D4F2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2D011A42437DF7900D4F2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D011A92437DF7900D4F2F0 /* RedmedNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedmedNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2D011AD2437DF7900D4F2F0 /* RedmedNoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmedNoteTests.swift; sourceTree = "<group>"; };
+		F2D011AF2437DF7900D4F2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D011B92437E13200D4F2F0 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		F2D011BD2437E66300D4F2F0 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
+		F2D011BF2437E73500D4F2F0 /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2D0118D2437DF7700D4F2F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2D011A62437DF7900D4F2F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2D011872437DF7700D4F2F0 = {
+			isa = PBXGroup;
+			children = (
+				F2D011922437DF7700D4F2F0 /* RedmedNote */,
+				F2D011AC2437DF7900D4F2F0 /* RedmedNoteTests */,
+				F2D011912437DF7700D4F2F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2D011912437DF7700D4F2F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2D011902437DF7700D4F2F0 /* RedmedNote.app */,
+				F2D011A92437DF7900D4F2F0 /* RedmedNoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2D011922437DF7700D4F2F0 /* RedmedNote */ = {
+			isa = PBXGroup;
+			children = (
+				F2D011BB2437E3BC00D4F2F0 /* Model */,
+				F2D011BC2437E3C200D4F2F0 /* Views & Assets */,
+				F2D011B82437E10C00D4F2F0 /* View Controllers */,
+				F2D011932437DF7700D4F2F0 /* AppDelegate.swift */,
+				F2D011952437DF7700D4F2F0 /* SceneDelegate.swift */,
+				F2CCEAA02437F02C003A3FE5 /* CoreDataStack.swift */,
+				F2D011A42437DF7900D4F2F0 /* Info.plist */,
+				F2D0119C2437DF7700D4F2F0 /* RedmedNote.xcdatamodeld */,
+				F2CCEAAB2437F80D003A3FE5 /* DataService.swift */,
+			);
+			path = RedmedNote;
+			sourceTree = "<group>";
+		};
+		F2D011AC2437DF7900D4F2F0 /* RedmedNoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2D011AD2437DF7900D4F2F0 /* RedmedNoteTests.swift */,
+				F2D011AF2437DF7900D4F2F0 /* Info.plist */,
+				F2CCEAAD2437F863003A3FE5 /* SaveAccessDelete.swift */,
+			);
+			path = RedmedNoteTests;
+			sourceTree = "<group>";
+		};
+		F2D011B82437E10C00D4F2F0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2D011972437DF7700D4F2F0 /* NoteDraftViewController.swift */,
+				F2D011BF2437E73500D4F2F0 /* NoteDetailsViewController.swift */,
+				F2D011BD2437E66300D4F2F0 /* EditNoteViewController.swift */,
+				F2D011B92437E13200D4F2F0 /* NoteTableViewCell.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F2D011BB2437E3BC00D4F2F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2CCEAA52437F365003A3FE5 /* Note.swift */,
+				F2CCEAA72437F379003A3FE5 /* Employee.swift */,
+				F2CCEAA22437F1F6003A3FE5 /* Note.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2D011BC2437E3C200D4F2F0 /* Views & Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F2D011992437DF7700D4F2F0 /* Main.storyboard */,
+				F2D0119F2437DF7900D4F2F0 /* Assets.xcassets */,
+				F2D011A12437DF7900D4F2F0 /* LaunchScreen.storyboard */,
+			);
+			path = "Views & Assets";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2D0118F2437DF7700D4F2F0 /* RedmedNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2D011B22437DF7900D4F2F0 /* Build configuration list for PBXNativeTarget "RedmedNote" */;
+			buildPhases = (
+				F2D0118C2437DF7700D4F2F0 /* Sources */,
+				F2D0118D2437DF7700D4F2F0 /* Frameworks */,
+				F2D0118E2437DF7700D4F2F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedmedNote;
+			productName = RedmedNote;
+			productReference = F2D011902437DF7700D4F2F0 /* RedmedNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2D011A82437DF7900D4F2F0 /* RedmedNoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2D011B52437DF7900D4F2F0 /* Build configuration list for PBXNativeTarget "RedmedNoteTests" */;
+			buildPhases = (
+				F2D011A52437DF7900D4F2F0 /* Sources */,
+				F2D011A62437DF7900D4F2F0 /* Frameworks */,
+				F2D011A72437DF7900D4F2F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2D011AB2437DF7900D4F2F0 /* PBXTargetDependency */,
+			);
+			name = RedmedNoteTests;
+			productName = RedmedNoteTests;
+			productReference = F2D011A92437DF7900D4F2F0 /* RedmedNoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2D011882437DF7700D4F2F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Rezo Joglidze";
+				TargetAttributes = {
+					F2D0118F2437DF7700D4F2F0 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					F2D011A82437DF7900D4F2F0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = F2D0118F2437DF7700D4F2F0;
+					};
+				};
+			};
+			buildConfigurationList = F2D0118B2437DF7700D4F2F0 /* Build configuration list for PBXProject "RedmedNote" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2D011872437DF7700D4F2F0;
+			productRefGroup = F2D011912437DF7700D4F2F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2D0118F2437DF7700D4F2F0 /* RedmedNote */,
+				F2D011A82437DF7900D4F2F0 /* RedmedNoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2D0118E2437DF7700D4F2F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2D011A32437DF7900D4F2F0 /* LaunchScreen.storyboard in Resources */,
+				F2D011A02437DF7900D4F2F0 /* Assets.xcassets in Resources */,
+				F2D0119B2437DF7700D4F2F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2D011A72437DF7900D4F2F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2D0118C2437DF7700D4F2F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2CCEAA42437F1F6003A3FE5 /* Note.xcdatamodeld in Sources */,
+				F2D011982437DF7700D4F2F0 /* NoteDraftViewController.swift in Sources */,
+				F2D011942437DF7700D4F2F0 /* AppDelegate.swift in Sources */,
+				F2CCEAAC2437F80D003A3FE5 /* DataService.swift in Sources */,
+				F2CCEAA82437F379003A3FE5 /* Employee.swift in Sources */,
+				F2D0119E2437DF7700D4F2F0 /* RedmedNote.xcdatamodeld in Sources */,
+				F2D011BA2437E13200D4F2F0 /* NoteTableViewCell.swift in Sources */,
+				F2CCEAA62437F365003A3FE5 /* Note.swift in Sources */,
+				F2D011BE2437E66300D4F2F0 /* EditNoteViewController.swift in Sources */,
+				F2D011C02437E73500D4F2F0 /* NoteDetailsViewController.swift in Sources */,
+				F2D011962437DF7700D4F2F0 /* SceneDelegate.swift in Sources */,
+				F2CCEAA12437F02C003A3FE5 /* CoreDataStack.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2D011A52437DF7900D4F2F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2D011AE2437DF7900D4F2F0 /* RedmedNoteTests.swift in Sources */,
+				F2CCEAAE2437F863003A3FE5 /* SaveAccessDelete.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2D011AB2437DF7900D4F2F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2D0118F2437DF7700D4F2F0 /* RedmedNote */;
+			targetProxy = F2D011AA2437DF7900D4F2F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2D011992437DF7700D4F2F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2D0119A2437DF7700D4F2F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2D011A12437DF7900D4F2F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2D011A22437DF7900D4F2F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2D011B02437DF7900D4F2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F2D011B12437DF7900D4F2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2D011B32437DF7900D4F2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RedmedNote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RezoJoglidze.RedmedNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2D011B42437DF7900D4F2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RedmedNote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RezoJoglidze.RedmedNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F2D011B62437DF7900D4F2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RedmedNoteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RezoJoglidze.RedmedNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedmedNote.app/RedmedNote";
+			};
+			name = Debug;
+		};
+		F2D011B72437DF7900D4F2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RedmedNoteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RezoJoglidze.RedmedNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedmedNote.app/RedmedNote";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2D0118B2437DF7700D4F2F0 /* Build configuration list for PBXProject "RedmedNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2D011B02437DF7900D4F2F0 /* Debug */,
+				F2D011B12437DF7900D4F2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2D011B22437DF7900D4F2F0 /* Build configuration list for PBXNativeTarget "RedmedNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2D011B32437DF7900D4F2F0 /* Debug */,
+				F2D011B42437DF7900D4F2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2D011B52437DF7900D4F2F0 /* Build configuration list for PBXNativeTarget "RedmedNoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2D011B62437DF7900D4F2F0 /* Debug */,
+				F2D011B72437DF7900D4F2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F2CCEAA22437F1F6003A3FE5 /* Note.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F2CCEAA32437F1F6003A3FE5 /* Note.xcdatamodel */,
+			);
+			currentVersion = F2CCEAA32437F1F6003A3FE5 /* Note.xcdatamodel */;
+			path = Note.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		F2D0119C2437DF7700D4F2F0 /* RedmedNote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F2D0119D2437DF7700D4F2F0 /* RedmedNote.xcdatamodel */,
+			);
+			currentVersion = F2D0119D2437DF7700D4F2F0 /* RedmedNote.xcdatamodel */;
+			path = RedmedNote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F2D011882437DF7700D4F2F0 /* Project object */;
+}
