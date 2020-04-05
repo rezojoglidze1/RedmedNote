@@ -105,9 +105,9 @@
 				F2D011932437DF7700D4F2F0 /* AppDelegate.swift */,
 				F2D011952437DF7700D4F2F0 /* SceneDelegate.swift */,
 				F2CCEAA02437F02C003A3FE5 /* CoreDataStack.swift */,
+				F2CCEAAB2437F80D003A3FE5 /* DataService.swift */,
 				F2D011A42437DF7900D4F2F0 /* Info.plist */,
 				F2D0119C2437DF7700D4F2F0 /* RedmedNote.xcdatamodeld */,
-				F2CCEAAB2437F80D003A3FE5 /* DataService.swift */,
 			);
 			path = RedmedNote;
 			sourceTree = "<group>";

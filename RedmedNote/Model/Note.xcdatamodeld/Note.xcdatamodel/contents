@@ -13,7 +13,7 @@
         <relationship name="toEmployee" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="notes" inverseEntity="Employee"/>
     </entity>
     <elements>
-        <element name="Note" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="Employee" positionX="-54" positionY="18" width="128" height="88"/>
+        <element name="Note" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

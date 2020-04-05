@@ -67,7 +67,7 @@
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lME-eT-HP2">
                                                 <rect key="frame" x="0.0" y="107.33333333333334" width="375" height="216.00000000000003"/>
                                             </pickerView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shout Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7m-2K-c8r">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7m-2K-c8r">
                                                 <rect key="frame" x="8" y="313.33333333333331" width="359" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -165,6 +165,12 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="fromTextField" destination="MX6-g3-eVu" id="x5N-ew-et2"/>
+                        <outlet property="messageTextView" destination="HP7-Hb-GUH" id="Wid-ur-mJK"/>
+                        <outlet property="noteCategoryPicker" destination="9Sj-em-Qyc" id="cit-o8-oFg"/>
+                        <outlet property="toEmployeePicker" destination="lME-eT-HP2" id="Pc5-6G-aNd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emH-j8-hID" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
