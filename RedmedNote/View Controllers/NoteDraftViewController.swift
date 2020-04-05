@@ -13,26 +13,25 @@ class NoteDraftViewController: UIViewController, ManagedObjectContextDependentTy
 
     @IBOutlet weak var noteTableView: UITableView!
     var managedObjectContext: NSManagedObjectContext!
-    var fetchedResultsController: NSFetchedResultsController<Note>!
+    var fetchedResultsController: NSFetchedResultsController<Note>?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureFetchedResultsController()
-        do {
-            try self.fetchedResultsController.performFetch()
-        } catch {
-            let alertController = UIAlertController(title: "Loading ShoutOuts Failed",
-                                                    message: "There was a problem loading the list of ShoutOut drafts. Please try again.",
-                                                    preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            
-            alertController.addAction(okAction)
-            
-            self.present(alertController, animated: true, completion: nil)
-        }
+//        configureFetchedResultsController()
+//        do {
+//            try self.fetchedResultsController?.performFetch()
+//        } catch {
+//            let alertController = UIAlertController(title: "Loading ShoutOuts Failed",
+//                                                    message: "There was a problem loading the list of ShoutOut drafts. Please try again.",
+//                                                    preferredStyle: .alert)
+//
+//            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//
+//            alertController.addAction(okAction)
+//
+//            self.present(alertController, animated: true, completion: nil)
+//        }
         
         noteTableView.dataSource = self
         noteTableView.delegate = self
@@ -51,7 +50,7 @@ class NoteDraftViewController: UIViewController, ManagedObjectContextDependentTy
 //                                                                         sectionNameKeyPath: #keyPath(Note.toEmployee.lastName),
 //                                                                         cacheName: nil)
         
-        self.fetchedResultsController.delegate = self
+        self.fetchedResultsController?.delegate = self
     }
 }
 
