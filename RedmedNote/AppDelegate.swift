@@ -6,6 +6,8 @@
 //  Copyright © 2020 Rezo Joglidze. All rights reserved.
 //
 
+
+//this is where app launched
 import UIKit
 import CoreData
 
@@ -14,16 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //3.5 aris video
-        //how to context can be created
-        let mainContext = createMainContext()
-        
+        //how to context can be created.  get NSManagerObjectContext instance
+        let mainContext = createMainContext() // CoreDataStack-ში მაქვს ეს ფუნქცია
+
         if let firstViewContoller = getFirstViewController() {
             firstViewContoller.managedObjectContext = mainContext
         }
+        let dataService = DataService(managedObjectContext: mainContext)
+        dataService.seedEmployees()// DataService-ში მაქვს ეს ფუნქცია, ეგ ფუნქცია წერს NSManagedContext-ში emoloyee-ებს.
+         print(dataService.seedEmployees())
         return true
     }
     
@@ -37,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return nil
         }
     }
+    
+    
+
+    
 
     // MARK: UISceneSession Lifecycle
 

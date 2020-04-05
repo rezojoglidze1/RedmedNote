@@ -19,5 +19,9 @@ class Note: NSManagedObject {
     @NSManaged var noteCategory: String
     
     @NSManaged var toEmployee: Employee
+    
+    static var entityName: String {
+        return "Note"
+    }
 }
 
