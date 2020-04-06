@@ -20,11 +20,12 @@ class NoteDetailsViewController: UIViewController, ManagedObjectContextDependent
    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        //NotificationCenter.default.addObserver NoteDraftViewController-dan gamotanebul context ichers.
         NotificationCenter.default.addObserver(forName: NSNotification.Name.NSManagedObjectContextDidSave,
                                                object: nil,
                                                queue: nil,
-                                               using: {//ამ ბლოკში არ შემოდის საერთოდ
+                                               using: {
                                                 (notification: Notification) in
                                                 //The userInfo  dictionary contains the following keys: NSInsertedObjectsKey, NSUpdatedObjectsKey, and NSDeletedObjectsKey.
                                                 if  let updatedNotes = notification.userInfo?[NSUpdatedObjectsKey] as? Set<Note> {
@@ -68,7 +69,6 @@ class NoteDetailsViewController: UIViewController, ManagedObjectContextDependent
 
                 let _ = self.navigationController?.popViewController(animated: true)
             }
-
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
             alertController.addAction(deleteAction)
@@ -77,13 +77,17 @@ class NoteDetailsViewController: UIViewController, ManagedObjectContextDependent
             self.present(alertController, animated: true, completion: nil)
         }
 
+}
 
-
-       // MARK: - Navigation
+extension NoteDetailsViewController {
+ 
+       //        MARK: - Navigation
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            let navigationController = segue.destination as! UINavigationController
-           let destinationVC = navigationController.viewControllers[0] as! EditNoteViewController
-           destinationVC.managedObjectContext = self.managedObjectContext
-       }
+        let destinationVC = navigationController.viewControllers.first as! EditNoteViewController
+               destinationVC.managedObjectContext = self.managedObjectContext
+               destinationVC.note = self.note
+           }
+    }
 
-}
+
