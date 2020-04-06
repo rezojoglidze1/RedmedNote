@@ -189,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-nv-KKS">
-                                <rect key="frame" x="4" y="24" width="406" height="789"/>
+                                <rect key="frame" x="4" y="24" width="406" height="794"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteTableViewCell" textLabel="ibh-Rq-0Vi" detailTextLabel="9UA-XJ-QGc" imageView="E3e-FN-11e" style="IBUITableViewCellStyleSubtitle" id="UGd-dL-HYj" customClass="NoteTableViewCell" customModule="RedmedNote" customModuleProvider="target">
@@ -233,7 +233,7 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kB-cZ-c4d">
-                                <rect key="frame" x="4" y="813" width="406" height="49"/>
+                                <rect key="frame" x="4" y="818" width="406" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="B9C-fp-5J6"/>
                                     <barButtonItem systemItem="trash" id="klP-Vm-5oA"/>
@@ -294,7 +294,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Work!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o7-QD-WZc">
-                                <rect key="frame" x="161.33333333333334" y="223" width="91.333333333333343" height="20.666666666666657"/>
+                                <rect key="frame" x="161.66666666666666" y="223" width="91" height="20.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.94117647059999998" green="0.58823529409999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -329,10 +329,14 @@ Just thought this deserved a shout out. Great work, Jane!
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2Z-5S-2sd">
-                                <rect key="frame" x="4" y="813" width="406" height="49"/>
+                                <rect key="frame" x="4" y="818" width="406" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="JgK-oH-bhp"/>
-                                    <barButtonItem systemItem="trash" id="qI7-dx-C0w"/>
+                                    <barButtonItem systemItem="trash" id="qI7-dx-C0w">
+                                        <connections>
+                                            <action selector="deleteButtonTapped:" destination="kuK-0q-hP7" id="0xa-ac-bE1"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="action" id="RcE-Fg-Vi1"/>
                                 </items>
                             </toolbar>
@@ -365,6 +369,11 @@ Just thought this deserved a shout out. Great work, Jane!
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="fromLabel" destination="2ES-ZD-v9P" id="D3e-kd-3h9"/>
+                        <outlet property="messageTextView" destination="7Km-0c-gG1" id="z8f-Uk-hCE"/>
+                        <outlet property="noteCategoryLabel" destination="7o7-QD-WZc" id="XKh-C8-KUQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oj4-mt-5xv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,6 +385,6 @@ Just thought this deserved a shout out. Great work, Jane!
         <image name="Star" width="123" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FKB-zw-RTQ"/>
+        <segue reference="Jie-gM-6NL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,34 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        //3.5 aris video
-        //how to context can be created.  get NSManagerObjectContext instance
-        let mainContext = createMainContext() // CoreDataStack-ში მაქვს ეს ფუნქცია
-
-        if let firstViewContoller = getFirstViewController() {
-            firstViewContoller.managedObjectContext = mainContext
-        }
-        let dataService = DataService(managedObjectContext: mainContext)
-        dataService.seedEmployees()// DataService-ში მაქვს ეს ფუნქცია, ეგ ფუნქცია წერს NSManagedContext-ში emoloyee-ებს.
-         print(dataService.seedEmployees())
         return true
     }
-    
-    
-    func getFirstViewController() -> NoteDraftViewController? {
-        if let navigationController = window?.rootViewController as? UINavigationController,
-            let firstVC = navigationController.viewControllers.first as? NoteDraftViewController {
-            return firstVC
-        }
-        else {
-            return nil
-        }
-    }
-    
-    
-
-    
 
     // MARK: UISceneSession Lifecycle
 
@@ -104,6 +78,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    
+    
 
 }
 

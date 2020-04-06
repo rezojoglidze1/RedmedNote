@@ -45,7 +45,7 @@ func createMainContext() -> NSManagedObjectContext {
 
 
     //TODO: Use migrations!  migracias vaketeb imitom rom, raimes roca davamateb Note-s mashin gamoidzaxeba es, radgan erti versiidan meoreze gadavdivart. tundac roca carili gaq mashinac gamoidzaxebs, radgan carieli aris mara misi object sheqmnilia mexsierebashi da am dzveli versiidan axal versaize gadasasvlelad migraciis gaketeba unda.
-    try! FileManager.default.removeItem(at: storeURL)
+  //  try? FileManager.default.removeItem(at: storeURL)
 
 
     try!  persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
