@@ -27,7 +27,8 @@ class EditNoteViewController: UIViewController, ManagedObjectContextDependentTyp
         "ხელფასის შესახებ",
         "ხვალინდელი გეგმა",
         "მითინგის შესახებ",
-        "აუცილებლად სანახავი შეტყობინება!"
+        "სპრინტის ამოცანები",
+        "აუცილებელი შეტყობინება!"
     ]
 
 
@@ -47,16 +48,29 @@ class EditNoteViewController: UIViewController, ManagedObjectContextDependentTyp
         noteCategoryPicker.tag = 1
 
         
-        self.note = NSEntityDescription.insertNewObject(forEntityName: Note.entityName, into: self.managedObjectContext) as! Note  /////////
+        self.note = self.note ?? NSEntityDescription.insertNewObject(forEntityName: Note.entityName, into: self.managedObjectContext) as! Note  /////////
 
+        setUIValues()
 
         messageTextView.layer.borderWidth = CGFloat(0.5)
-       // messageTextView.layer.borderColor = UIColor(colorLiteralRed: 204/255, green: 204/255, blue: 204/255, alpha: 1.0).cgColor
         messageTextView.layer.cornerRadius = 5
         messageTextView.clipsToBounds = true
     }
 
-
+    
+       func setUIValues() {
+           let selectedEmployeeRow = self.employees.firstIndex(of: self.note.toEmployee) ?? 0
+           self.toEmployeePicker.selectRow(selectedEmployeeRow, inComponent: 0, animated: false)
+           
+           let selectedShoutCategoryRow = self.noteCategories.firstIndex(of: self.note.noteCategory) ?? 0
+           self.noteCategoryPicker.selectRow(selectedShoutCategoryRow, inComponent: 0, animated: false)
+           
+           self.messageTextView.text = self.note.message
+           self.fromTextField.text = self.note.from
+       }
+    
+    
+    //get employees from managedObjectContex.fetch
     func fetchEmployees() {
 
         let employeeFetchRequest = NSFetchRequest<Employee>(entityName: Employee.entityName)
@@ -74,6 +88,8 @@ class EditNoteViewController: UIViewController, ManagedObjectContextDependentTyp
         }
     }
     
+   
+    
 
 
 
@@ -81,6 +97,7 @@ class EditNoteViewController: UIViewController, ManagedObjectContextDependentTyp
         self.managedObjectContext.rollback()
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
      let selectedEmployeeIndex = self.toEmployeePicker.selectedRow(inComponent: 0)
      let selectedEmployee = self.employees[selectedEmployeeIndex]
@@ -128,8 +145,8 @@ extension EditNoteViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if pickerView.tag == 0 {
-            
             let employee = self.employees[row]
+            
             return "\(employee.firstName) \(employee.lastName)"
         } else {
             return noteCategories[row]

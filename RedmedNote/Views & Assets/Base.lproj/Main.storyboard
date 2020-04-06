@@ -189,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-nv-KKS">
-                                <rect key="frame" x="4" y="24" width="406" height="794"/>
+                                <rect key="frame" x="4" y="24" width="406" height="789"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteTableViewCell" textLabel="ibh-Rq-0Vi" detailTextLabel="9UA-XJ-QGc" imageView="E3e-FN-11e" style="IBUITableViewCellStyleSubtitle" id="UGd-dL-HYj" customClass="NoteTableViewCell" customModule="RedmedNote" customModuleProvider="target">
@@ -233,7 +233,7 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kB-cZ-c4d">
-                                <rect key="frame" x="4" y="818" width="406" height="44"/>
+                                <rect key="frame" x="4" y="813" width="406" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="B9C-fp-5J6"/>
                                     <barButtonItem systemItem="trash" id="klP-Vm-5oA"/>
@@ -243,10 +243,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aQK-nv-KKS" firstAttribute="top" secondItem="Vzw-Ld-6h6" secondAttribute="bottom" constant="-64" id="6wP-Fy-KPz"/>
+                            <constraint firstItem="aQK-nv-KKS" firstAttribute="top" secondItem="yWM-q3-p1Z" secondAttribute="topMargin" constant="-64" id="7av-TV-UsD"/>
                             <constraint firstItem="8kB-cZ-c4d" firstAttribute="top" secondItem="aQK-nv-KKS" secondAttribute="bottom" id="DT3-Gt-mOQ"/>
-                            <constraint firstItem="rAk-1o-1qj" firstAttribute="top" secondItem="8kB-cZ-c4d" secondAttribute="bottom" id="HAs-x7-Pze"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8kB-cZ-c4d" secondAttribute="trailing" constant="-16" id="Ibv-hy-6r6"/>
+                            <constraint firstItem="8kB-cZ-c4d" firstAttribute="bottom" secondItem="ghM-j5-xSf" secondAttribute="bottom" id="ZZZ-3Q-8AL"/>
                             <constraint firstItem="aQK-nv-KKS" firstAttribute="leading" secondItem="yWM-q3-p1Z" secondAttribute="leadingMargin" constant="-16" id="etD-FG-W6p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aQK-nv-KKS" secondAttribute="trailing" constant="-16" id="fAH-53-8bH"/>
                             <constraint firstItem="8kB-cZ-c4d" firstAttribute="leading" secondItem="yWM-q3-p1Z" secondAttribute="leadingMargin" constant="-16" id="rgr-2G-jFH"/>
@@ -293,8 +293,8 @@
                                     <constraint firstAttribute="height" constant="5" id="EVj-D5-ADE"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Work!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o7-QD-WZc">
-                                <rect key="frame" x="161.66666666666666" y="223" width="91" height="20.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Work!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o7-QD-WZc">
+                                <rect key="frame" x="161.33333333333334" y="223" width="91.666666666666657" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.94117647059999998" green="0.58823529409999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -319,9 +319,8 @@ Just thought this deserved a shout out. Great work, Jane!
                                     <constraint firstAttribute="height" constant="5" id="I0B-6K-oWT"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ES-ZD-v9P">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ES-ZD-v9P">
                                 <rect key="frame" x="184" y="479" width="156" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">-Brad Smith
  Procurement Dept.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -329,7 +328,7 @@ Just thought this deserved a shout out. Great work, Jane!
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2Z-5S-2sd">
-                                <rect key="frame" x="4" y="818" width="406" height="44"/>
+                                <rect key="frame" x="4" y="813" width="406" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="JgK-oH-bhp"/>
                                     <barButtonItem systemItem="trash" id="qI7-dx-C0w">
@@ -346,18 +345,21 @@ Just thought this deserved a shout out. Great work, Jane!
                             <constraint firstItem="7Km-0c-gG1" firstAttribute="leading" secondItem="zHx-ss-Owo" secondAttribute="leadingMargin" constant="19" id="16o-S7-U76"/>
                             <constraint firstItem="J2Z-5S-2sd" firstAttribute="leading" secondItem="zHx-ss-Owo" secondAttribute="leadingMargin" constant="-16" id="1lj-fp-4SW"/>
                             <constraint firstItem="3Xu-hU-4Q6" firstAttribute="leading" secondItem="zHx-ss-Owo" secondAttribute="leadingMargin" constant="19" id="2TY-v8-swl"/>
+                            <constraint firstItem="2ES-ZD-v9P" firstAttribute="leading" secondItem="twJ-pJ-2Un" secondAttribute="leading" constant="184" id="2ey-b6-bfh"/>
                             <constraint firstItem="E9t-jy-Qyc" firstAttribute="top" secondItem="VVH-NY-OXb" secondAttribute="bottom" constant="37" id="5MU-kQ-4gT"/>
                             <constraint firstItem="VVH-NY-OXb" firstAttribute="centerX" secondItem="zHx-ss-Owo" secondAttribute="centerX" id="9bi-ue-qii"/>
-                            <constraint firstItem="wjZ-Gt-yRy" firstAttribute="top" secondItem="J2Z-5S-2sd" secondAttribute="bottom" id="DS7-Bx-VjJ"/>
                             <constraint firstItem="7o7-QD-WZc" firstAttribute="top" secondItem="VVH-NY-OXb" secondAttribute="bottom" constant="8" id="FKN-Hp-k9s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E9t-jy-Qyc" secondAttribute="trailing" constant="19" id="Gl8-1h-tRo"/>
                             <constraint firstItem="7Km-0c-gG1" firstAttribute="top" secondItem="E9t-jy-Qyc" secondAttribute="bottom" constant="8" id="HPO-ri-eIY"/>
                             <constraint firstItem="E9t-jy-Qyc" firstAttribute="leading" secondItem="zHx-ss-Owo" secondAttribute="leadingMargin" constant="19" id="KN2-W6-Egt"/>
+                            <constraint firstItem="2ES-ZD-v9P" firstAttribute="top" secondItem="3Xu-hU-4Q6" secondAttribute="bottom" constant="5" id="KYr-50-I6R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J2Z-5S-2sd" secondAttribute="trailing" constant="-16" id="Ntz-Rt-Iej"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Km-0c-gG1" secondAttribute="trailing" constant="15" id="SSF-5M-o3l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3Xu-hU-4Q6" secondAttribute="trailing" constant="19" id="SoF-6S-LLm"/>
                             <constraint firstItem="VVH-NY-OXb" firstAttribute="top" secondItem="PP6-Jd-vzI" secondAttribute="bottom" constant="27" id="ZFO-Nq-t3H"/>
+                            <constraint firstItem="J2Z-5S-2sd" firstAttribute="bottom" secondItem="twJ-pJ-2Un" secondAttribute="bottom" id="e6p-tG-8sr"/>
                             <constraint firstItem="7o7-QD-WZc" firstAttribute="centerX" secondItem="zHx-ss-Owo" secondAttribute="centerX" id="egW-rl-wVX"/>
+                            <constraint firstItem="twJ-pJ-2Un" firstAttribute="trailing" secondItem="2ES-ZD-v9P" secondAttribute="trailing" constant="74" id="oMd-Ae-8wg"/>
                             <constraint firstItem="3Xu-hU-4Q6" firstAttribute="top" secondItem="7Km-0c-gG1" secondAttribute="bottom" constant="8" id="wUs-2N-hPU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="twJ-pJ-2Un"/>
@@ -365,7 +367,7 @@ Just thought this deserved a shout out. Great work, Jane!
                     <navigationItem key="navigationItem" title="Note Details" id="ARC-co-lAc">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Iji-Pm-3Pm">
                             <connections>
-                                <segue destination="f22-sN-liz" kind="show" id="Jie-gM-6NL"/>
+                                <segue destination="f22-sN-liz" kind="show" identifier="editNote" id="Jie-gM-6NL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

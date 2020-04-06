@@ -10,11 +10,11 @@ import UIKit
 import CoreData
 
 class NoteDraftViewController: UIViewController, ManagedObjectContextDependentType, NSFetchedResultsControllerDelegate {
-
+    
     @IBOutlet weak var noteTableView: UITableView!
     var managedObjectContext: NSManagedObjectContext!
     var fetchedResultsController: NSFetchedResultsController<Note>!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,27 +26,26 @@ class NoteDraftViewController: UIViewController, ManagedObjectContextDependentTy
             let alertController = UIAlertController(title: "Loading ShoutOuts Failed",
                                                     message: "There was a problem loading the list of ShoutOut drafts. Please try again.",
                                                     preferredStyle: .alert)
-
+            
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-
             alertController.addAction(okAction)
-
             self.present(alertController, animated: true, completion: nil)
         }
         
         noteTableView.dataSource = self
         noteTableView.delegate = self
-
+        
     }
     
+    
     func configureFetchedResultsController() {
-        let shoutOutFetchRequest = NSFetchRequest<Note>(entityName: Note.entityName)
-     //   let departmentSortDescriptor = NSSortDescriptor(key: #keyPath(ShoutOut.toEmployee.department), ascending: true)
+        let noteFetchRequest = NSFetchRequest<Note>(entityName: Note.entityName)
+        //   let departmentSortDescriptor = NSSortDescriptor(key: #keyPath(ShoutOut.toEmployee.department), ascending: true)
         let lastNameSortDescriptor = NSSortDescriptor(key: #keyPath(Note.toEmployee.lastName), ascending: true)
         let firstNameSortDescriptor = NSSortDescriptor(key: #keyPath(Note.toEmployee.firstName), ascending: true)
-        shoutOutFetchRequest.sortDescriptors = [lastNameSortDescriptor, firstNameSortDescriptor]
+        noteFetchRequest.sortDescriptors = [lastNameSortDescriptor, firstNameSortDescriptor]
         
-        self.fetchedResultsController = NSFetchedResultsController<Note>(fetchRequest: shoutOutFetchRequest,
+        self.fetchedResultsController = NSFetchedResultsController<Note>(fetchRequest: noteFetchRequest,
                                                                          managedObjectContext: self.managedObjectContext,
                                                                          sectionNameKeyPath: #keyPath(Note.toEmployee.lastName),
                                                                          cacheName: nil)
@@ -97,6 +96,8 @@ class NoteDraftViewController: UIViewController, ManagedObjectContextDependentTy
             if let insertIndexPath = newIndexPath {
                 self.noteTableView.insertRows(at: [insertIndexPath], with: .fade)
             }
+        default:
+            print("something happen")
         }
     }
     
@@ -119,7 +120,6 @@ class NoteDraftViewController: UIViewController, ManagedObjectContextDependentTy
         default:
             break
         }
-        
     }
 }
 
@@ -128,14 +128,9 @@ class NoteDraftViewController: UIViewController, ManagedObjectContextDependentTy
 
 
 
-
-
-
-
 extension NoteDraftViewController: UITableViewDataSource, UITableViewDelegate {
     
-    
-    // MARK: TableView Data Source methods
+    //MARK: TableView Data Source methods
     func numberOfSections(in tableView: UITableView) -> Int {
         if let sections = self.fetchedResultsController.sections {
             return sections.count
@@ -149,7 +144,6 @@ extension NoteDraftViewController: UITableViewDataSource, UITableViewDelegate {
             let currentSection = sections[section]
             return currentSection.name
         }
-        
         return nil
     }
     
@@ -181,51 +175,28 @@ extension NoteDraftViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     
+   
     
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "noteTableViewCell", for: indexPath) as! NoteTableViewCell
-//
-//        let note = self.fetchedResultsController?.object(at: indexPath)
-//
-//
-//        cell.titleLabelCell.text = "\(note?.toEmployee.firstName) \(note?.toEmployee.lastName)"
-//        cell.subTitleLabelCell.text = note?.message
-//
-//        return cell
-//    }
-//
-//
-//
-//
-//
-//
-//    //tableView delegate methods
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-//
-    
-    
-       
-       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           switch segue.identifier! {
-           case "noteDetails":
-               let destinationVC = segue.destination as! NoteDetailsViewController
-               destinationVC.managedObjectContext = self.managedObjectContext
-               
-           case "addNote":
-               let navigationController = segue.destination as! UINavigationController
-               let destinationVC = navigationController.viewControllers[0] as! EditNoteViewController
-               destinationVC.managedObjectContext = self.managedObjectContext
-           default:
-               break
-           }
-       }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "noteDetails":
+            let destinationVC = segue.destination as! NoteDetailsViewController
+            destinationVC.managedObjectContext = self.managedObjectContext
+            
+            
+            let selectedIndexPath = self.noteTableView.indexPathForSelectedRow!
+            let selectedNote = self.fetchedResultsController.object(at: selectedIndexPath)
+            
+            destinationVC.note = selectedNote
+            
+        case "addNote":
+            let navigationController = segue.destination as! UINavigationController
+            let destinationVC = navigationController.viewControllers[0] as! EditNoteViewController
+            destinationVC.managedObjectContext = self.managedObjectContext
+        default:
+            break
+        }
+    }
     
 }
 

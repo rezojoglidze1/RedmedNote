@@ -23,7 +23,7 @@ class RedmedNoteTests: XCTestCase {
         let storyboard = UIStoryboard(name: "Main",
                                       bundle: Bundle.main)
         let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
-        systemUnderTest = navigationController.viewControllers[0] as! NoteDraftViewController
+        systemUnderTest = navigationController.viewControllers[0] as? NoteDraftViewController
 
         UIApplication.shared.keyWindow!.rootViewController = systemUnderTest
         

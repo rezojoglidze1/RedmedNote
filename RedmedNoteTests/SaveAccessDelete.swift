@@ -42,22 +42,6 @@ class SaveAccessDelete: XCTestCase {
     
     
     func testFetchAllEmployees() {
-        //        let managedObjectContext = createMainContextInMemory() // NSManagedObjectContext instance
-        //        let dataService =  DataService(managedObjectContext: managedObjectContext) //DataService instance
-        //        dataService.seedEmployees() // to get all employees which we have in persistent store
-        //
-        //        //initialize NSFetchRequest
-        //        let employeeFetchRequest = NSFetchRequest<Employee>(entityName: Employee.entityName)
-        //
-        //        do{
-        //        //execute with NSManagedObjectContext
-        //            let employees = try managedObjectContext.fetch(employeeFetchRequest)
-        //        //work with the result
-        //            print(employees)
-        //        } catch {
-        //            print("there is a problem fech employees: \(error)")
-        //        }
-        //
         
         let employeeFetchRequest = NSFetchRequest<Employee>(entityName: Employee.entityName)
         
@@ -203,7 +187,7 @@ class SaveAccessDelete: XCTestCase {
         for note in notes {
             print("\n----------Notes----------")
             print("Note Category: \(note.noteCategory)")
-            print("Message: \(note.message)")
+            print("Message: \(note.message ?? " ")")
             print("To: \(note.toEmployee.firstName) \(note.toEmployee.lastName)")
         }
     }
