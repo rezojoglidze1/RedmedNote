@@ -23,10 +23,11 @@ class EditNoteViewController: UIViewController, ManagedObjectContextDependentTyp
     @IBOutlet weak var fromTextField: UITextField!
 
     let noteCategories = [
-        "Great Job!",
-        "Awesome Work!",
-        "Well Done!",
-        "Amazing Effort"
+        "სამუშაო დროის შესახებ",
+        "ხელფასის შესახებ",
+        "ხვალინდელი გეგმა",
+        "მითინგის შესახებ",
+        "აუცილებლად სანახავი შეტყობინება!"
     ]
 
 
@@ -93,7 +94,8 @@ class EditNoteViewController: UIViewController, ManagedObjectContextDependentTyp
      self.note.from = self.fromTextField.text ?? "Anonymous"
 
      do {
-         try self.managedObjectContext.save()
+         try self.managedObjectContext.save() // save() Attempts to commit unsaved changes to registered objects to the context’s parent store.
+
          self.dismiss(animated: true, completion: nil)
      } catch {
          let alert = UIAlertController(title: "Trouble Saving",
